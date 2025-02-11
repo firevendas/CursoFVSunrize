@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fire Vendas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="Arquivos/Logo.png" type="image/x-icon">
+  <style>
+
+    body{
+         font-family: "Barlow", serif;
+         }
+	.carrousel {
+		width: 1100px;
+		margin: auto;
+		height: 550px;
+		overflow:hidden;
+	}
+	.item, .item2 {
+		width: 335px;
+		height: 500px;
+		float: left;
+		margin-left: 25px;
+		margin-top: 20px;
+		color: #fff;
+		font-size: 40px;
+		text-align: center;
+		padding-top: 30px;
+		cursor: pointer;
+		transition: 1s all;
+	}
+	.cont {
+		position: absolute;
+		width: 1100px;
+		margin-top: 190px;
+	}
+	.tapa {
+	  width: 12000px; /* Size of the carrousel */
+		transition: .9s all;
+	}
+	.item img, .item2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 2px solid rgba(245, 245, 245, 0.534);
+
+	}
+	.item:hover, .item2:hover  {
+		margin-top: -5px;
+	}
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Largura máxima do vídeo */
+    margin: auto;
+    cursor: pointer;
+}
+
+.thumbnail {
+    width: 100%;
+    display: block;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 450px;
+    display: none; /* Oculta o vídeo até ser clicado */
+}
+
+
+@media (max-width: 1000px) {
+    .container{
+      max-width: 100% !important;
+    }
+    main{
+      max-width: 80% !important;
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+    header{
+      background-image: none !important;
+    }
+    .resp-logo{
+      display: block !important;
+      width: 100% !important;
+      margin: auto !important;
+    }
+    .resp-text-center{
+      text-align: center !important;
+    }
+    .resp-p-small{
+      font-size: 1.4em !important;
+    }
+    .resp-btn-large{
+      width: 85% !important;
+      font-size: 1.5em !important;
+      margin-bottom: 20px !important;
+    }
+    .resp-garantia{
+      width: 80% !important;
+      margin: auto !important;
+    }
+    .resp-title-margin{
+      margin-top: 10% !important;
+    }
+    .resp-btn-small{
+      font-size: 1.2em !important;
+    }
+    .resp-none{
+      display: none !important;
+    }	
+    .resp-block{
+      display: block !important;
+    }
+    .title-resp-small{
+      font-size: 1.8em !important;
+    }	
+    .resp-small-text{
+      font-size: 1em !important;
+    }
+    .resp-span{
+      font-size: 0.8em !important;
+    }
+    .title-resp-small-2{
+      font-size: 1.7em !important;
+    }
+    .resp-wrap{
+      flex-direction: column !important;
+    }	
+
+
+}
+  </style>
+</head>
+<body style="background-color: #030000;">
+
+  <header style="background-image: url('Arquivos/fundo-header.png'); background-size: cover; background-position: center; background-repeat: no-repeat; border-bottom: 2px solid rgba(200, 0, 0, 0.574);" class="mb-5">        
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="row w-100">
+        <div class="col-md-6 d-flex flex-column justify-content-center resp-text-center" >
+          <img src="Arquivos/Logo.png" alt="" class="resp-logo" style="display: none; margin-bottom: 10px !important;">  
+          <h1 style="color: white; font-weight: 900; text-transform: uppercase; font-size: 2.5em;">COMECE A <span style="background-color: rgb(226, 8, 8);">GANHAR DINHEIRO</span>  NA INTERNET!
+            </h1>
+            <p style="color: white; font-size: 1.8em; width: 90%;" class="resp-p-small">(Mais de <strong> 2 mil reais todos os meses </strong>mesmo sendo um iniciante)</p>
+            <a href="#checkout">
+            <button class="btn py-1 resp-btn-large" style="width: 50%; border-radius: 2px; background-color: transparent; color: #ffffff; text-transform: uppercase; font-weight: 900; font-size: 1.7em; border: 3px solid rgb(226, 8, 8);">Quero Vender Hoje!</button></a>
+        </div>
+        <div class="col-md-6">
+        </div>
+        </div>
+    </div>
+  </header> 
+    <main class="container" style="max-width: 75%;">
+
+
+        <section>
+            <div class="container">
+                <p class="text-center title-resp-small" style="color: white; font-size: 2.2em; text-transform: uppercase; text-decoration: overline; font-weight: 700;">Confira os <span style="background-color: rgb(226, 8, 8);">resultados de quem começou</span> cedo! </p>
+            </div>
+        </section>
+        
+
+        <section class="resp-none">
+            <div class="carrousel">
+                <div class="tapa" id="move">
+                  <div class="item "><img src="Arquivos/Relato1.jpg"></div>
+                  <div class="item "><img src="Arquivos/Relato3.jpg"></div>
+                  <div class="item "><img src="Arquivos/Relato2.jpg"></div>
+                  <div class="item "><img src="Arquivos/Relato4.jpeg"></div>
+                    
+                    <div class="item "><img src="Arquivos/Relato1.jpg"></div>
+                    <div class="item "><img src="Arquivos/Relato3.jpg"></div>
+                    <div class="item "><img src="Arquivos/Relato2.jpg"></div>
+                    <div class="item "><img src="Arquivos/Relato4.jpeg"></div>
+                    
+                    <div class="item "><img src="Arquivos/Relato1.jpg"></div>
+                    <div class="item "><img src="Arquivos/Relato3.jpg"></div>
+                    <div class="item "><img src="Arquivos/Relato2.jpg"></div>
+                    <div class="item "><img src="Arquivos/Relato4.jpeg"></div>
+
+                    <div class="item "><img src="Arquivos/Relato1.jpg"></div>
+                    <div class="item "><img src="Arquivos/Relato3.jpg"></div>
+                    <div class="item "><img src="Arquivos/Relato2.jpg"></div>
+                    <div class="item "><img src="Arquivos/Relato4.jpeg"></div>
+
+                    <div class="item "><img src="Arquivos/Relato1.jpg"></div>
+                    <div class="item "><img src="Arquivos/Relato3.jpg"></div>
+                    <div class="item "><img src="Arquivos/Relato2.jpg"></div>
+                    <div class="item "><img src="Arquivos/Relato4.jpeg"></div>
+
+                    <div class="item "><img src="Arquivos/Relato1.jpg"></div>
+                    <div class="item "><img src="Arquivos/Relato3.jpg"></div>
+                    <div class="item "><img src="Arquivos/Relato2.jpg"></div>
+                    <div class="item "><img src="Arquivos/Relato4.jpeg"></div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- <section  class="resp-block" >
+          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+            <img src="Arquivos/Relato1.jpg" style="width: 100%; max-width: 300px;  border-radius: 8px;">
+            <img src="Arquivos/Relato3.jpg" style="width: 100%; max-width: 300px;  border-radius: 8px;">
+            <img src="Arquivos/Relato2.jpg" style="width: 100%; max-width: 300px;  border-radius: 8px;">
+          </div>
+        </section> -->
+
+        <section  class="resp-block" style="display: none;">
+          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; ">
+            <img src="Arquivos/Relato1.jpg" style="width: 100%; max-width: 300px;  border-radius: 8px; transition: 250ms; max-height: 700px;" id="img-1">
+            <img src="Arquivos/Relato3.jpg" style="width: 100%; max-width: 300px;  border-radius: 8px; display: none; transition: 250ms; max-height: 700px;" id="img-2">
+            <img src="Arquivos/Relato2.jpg" style="width: 100%; max-width: 300px;  border-radius: 8px; display: none; transition: 250ms; max-height: 700px;" id="img-3">
+          </div>
+        </section>
+        
+
+        <section>
+            <div class="container mt-5 mb-5">
+              <p class="text-center title-resp-small" style="color: white; font-size: 2.2em; text-transform: uppercase; text-decoration: overline; font-weight: 700;">
+                O QUE VOCÊ VAI APRENDER?
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <div class="album ">
+                <div class="container">
+        
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="card mb-4 box-shadow" style="border: none;">
+                        <img class="card-img-top" src="Arquivos/Modulo3.jpg" alt="Card image cap" >
+                        <div class="card-body" style="background-color: rgb(9, 9, 9); color: white;">
+                          <p class="card-text" >Fortaleça a mentalidade com <strong> foco no cliente, resiliência, confiança </strong>, disciplina e aprendizado contínuo.</p>
+                          <div class="d-flex justify-content-between align-items-center">
+
+                            <small style="color: #ffffff; font-weight: 700; font-size: 1.2em;" class="resp-text-center">Módulo 01 - Mindset</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4">
+                      <div class="card mb-4 box-shadow" style="border: none;">
+                        <img class="card-img-top"  src="Arquivos/Modulo5.png"alt="Card image cap">
+                        <div class="card-body" style="background-color: rgb(9, 9, 9); color: white;">
+                          <p class="card-text">Acesso ao Grupo de <strong>Networking, Diversos Materiais Exclusivos</strong>, Benefícios e Muito Mais para Você!
+                          </p>
+                          <div class="d-flex justify-content-between align-items-center">
+
+                            <small style="color: #ffffff; font-weight: 700; font-size: 1.2em;" class="resp-text-center">Módulo 02 - Grupo Networking
+                            </small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4">
+                      <div class="card mb-4 box-shadow" style="border: none;">
+                        <img class="card-img-top"  src="Arquivos/Modulo4.jpg"alt="Card image cap">
+                        <div class="card-body" style="background-color: rgb(9, 9, 9); color: white;">
+                          <p class="card-text">Módulo de marketing digital ensina estratégias para <strong>atrair clientes, engajar e aumentar vendas</strong>.
+                          </p>
+                          <div class="d-flex justify-content-between align-items-center">
+
+                            <small style="color: #ffffff; font-weight: 700; font-size: 1.2em;" class="resp-text-center">Módulo 03 - Marketing Digital
+                            </small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+        
+                    <div class="col-md-4">
+                      <div class="card mb-4 box-shadow" style="border: none;">
+                        <img class="card-img-top"  src="Arquivos/Modulo7.jpg"alt="Card image cap">
+                        <div class="card-body" style="background-color: rgb(9, 9, 9); color: white;">
+                          <p class="card-text">Módulo de vendas orgânicas ensina estratégias para atrair <strong>clientes sem anúncios</strong> e gerar engajamento.
+                          </p>
+                          <div class="d-flex justify-content-between align-items-center">
+
+                            <small style="color: #ffffff; font-weight: 700; font-size: 1.2em;" class="resp-text-center">Módulo 04 - Venda no orgânico
+                            </small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4">
+                      <div class="card mb-4 box-shadow" style="border: none;">
+                        <img class="card-img-top"  src="Arquivos/Modulo2.jpg"alt="Card image cap">
+                        <div class="card-body" style="background-color: rgb(9, 9, 9); color: white;">
+                          <p class="card-text">Módulo de perfil no Instagram ensina a <strong>estruturar página, bio e analisar concorrentes</strong> para vender.
+                          </p>
+                          <div class="d-flex justify-content-between align-items-center">
+
+                            <small style="color: #ffffff; font-weight: 700; font-size: 1.2em;" class="resp-text-center">Módulo 05 - Perfil Instagram
+                            </small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                      <div class="card mb-4 box-shadow" style="border: none;">
+                        <img class="card-img-top"  src="Arquivos/Modulo10.jpg"alt="Card image cap">
+                        <div class="card-body" style="background-color: rgb(9, 9, 9); color: white;">
+                          <p class="card-text">Módulo de <strong>edição de vídeos</strong> para vendas online, com técnicas profissionais e <strong>cortes dinâmicos.</strong></p>
+                          <div class="d-flex justify-content-between align-items-center">
+
+                            <small style="color: #ffffff; font-weight: 700; font-size: 1.2em;" class="resp-text-center">Módulo 06 - Editar Aparecendo
+                            </small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4">
+                      <div class="card mb-4 box-shadow" style="border: none;">
+                        <img class="card-img-top"  src="Arquivos/Modulo8.jpg"alt="Card image cap">
+                        <div class="card-body" style="background-color: rgb(9, 9, 9); color: white;">
+                          <p class="card-text">Módulo de <strong>edição sem aparecer</strong>, usando imagens, textos e narrações para impulsionar vendas online.
+                          </p>
+                          <div class="d-flex justify-content-between align-items-center">
+
+                            <small style="color: #ffffff; font-weight: 700; font-size: 1.2em;" class="resp-text-center">Módulo 07 - Editar sem Aparecer
+                            </small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4">
+                      <div class="card mb-4 box-shadow" style="border: none;">
+                        <img class="card-img-top"  src="Arquivos/Modulo1.png"alt="Card image cap">
+                        <div class="card-body" style="background-color: rgb(9, 9, 9); color: white;">
+                          <p class="card-text">Módulo de Como Virar um Produtor com Callebe Lucas, ensinando <strong>lançamentos, funil de vendas</strong> e mais!
+                          </p>
+                          <div class="d-flex justify-content-between align-items-center">
+
+                            <small style="color: #ffffff; font-weight: 700; font-size: 1.2em;" class="resp-text-center">Módulo 08 - Virando um Produtor
+                            </small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4">
+                      <div class="card mb-4 box-shadow" style="border: none;">
+                        <img class="card-img-top"  src="Arquivos/Modulo6.png"alt="Card image cap">
+                        <div class="card-body" style="background-color: rgb(9, 9, 9); color: white;">
+                          <p class="card-text">Módulo Desafio Primeira Venda com Callebe Lucas, ensinando iniciantes a <strong>alcançar a primeira venda online</strong>.
+                          </p>
+                          <div class="d-flex justify-content-between align-items-center">
+
+                            <small style="color: #ffffff; font-weight: 700; font-size: 1.2em;" class="resp-text-center">Bonûs - DESAFIO PRIMEIRA VENDA
+                            </small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </section>
+
+        <section>
+          <div class="container">
+              <i> <p class="text-center title-resp-small" style="color: rgb(226, 8, 8); font-size: 2em; text-transform: uppercase;  font-weight: 700;">E MUITO MAIS MÓDULOS, <span style="color: white;"> 6 aulas lançadas por semana!! </span></p> </i>
+          </div>
+      </section>
+      
+
+        <section>
+          <div class="container mt-5 mb-5">
+            <p class="text-center title-resp-small-2" style="color: white; font-size: 2.2em; text-transform: uppercase; text-decoration: overline; font-weight: 700;">
+              
+              Seu esforço merece reconhecimento — <span style="background-color: rgb(226, 8, 8);">ganhe prêmios</span>!
+              </p>
+          </div>
+      </section>
+    
+        <section class="mb-5">
+            <div style="display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap;">
+
+                <div class="col-md-4">
+                  <div class="card  box-shadow" style="background-color: rgb(9, 9, 9);">
+                    <div class="card-body" style="background-color: rgb(9, 9, 9); color: white; text-align: center;">
+                      <h3 style="margin-bottom: -40px;">Plaquinhas</h3>
+                    </div>
+                    <img id="placaImage" class="card-img-top" src="Arquivos/placa1.png" alt="Card image cap">                    <p class="card-text px-3" style="color: white; margin-top: -20px; text-align: center;">Ela simboliza o seu esforço e a conquista das vendas, uma <strong>peça de destaque para quem aprecia celebrar suas vitórias</strong> com estilo.</p>
+
+                    <div class="" style="display: flex; align-items: center; justify-content: center;">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changeImage('Arquivos/placa1.png')">White</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changeImage('Arquivos/plaquinha2.png')">Black</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="card  box-shadow" style="background-color: rgb(9, 9, 9);">
+                    <div class="card-body" style="background-color: rgb(9, 9, 9); color: white; text-align: center;">
+                      <h3 style="margin-bottom: -40px;">Pulseiras</h3>
+                    </div>
+                    <img id="pulseiraImage" class="card-img-top" src="Arquivos/pulseira1.png" alt="Card image cap">                    <p class="card-text px-3" style="color: white; margin-top: -20px; text-align: center;"><strong>Um símbolo de sucesso</strong> que você pode levar para todos os lugares, representando sua <strong>dedicação e conquista pessoal</strong>.</p>
+
+                    <div class="" style="display: flex; align-items: center; justify-content: center;">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changePulseiraImage('Arquivos/pulseira1.png')">White</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changePulseiraImage('Arquivos/pulseira2.png')">Black</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </section>
+
+        <section style="margin-top: 70px;">
+          <div class="container mb-5 mt-5">
+            <p class="text-center title-resp-small" style="color: white; font-size: 2.2em; text-transform: uppercase; text-decoration: overline; font-weight: 700;">
+              Aprenda com quem já tem  <span style="background-color: rgb(226, 8, 8);">resultados de verdade!</span>
+              </p>
+          </div>
+
+          <div class="video-container mb-4" onclick="playVideo()">
+            <img class="thumbnail" src="Arquivos/Thumb.jpg" alt="Thumbnail do vídeo">
+            <button class="play-button">▶</button>
+            <iframe id="videoFrame" src="https://www.youtube.com/embed/O29tKMqZq5k?autoplay=1" frameborder="0" allowfullscreen></iframe>
+          </div>
+<!-- 
+            <div class="container d-flex justify-content-center">
+              <button class="btn py-1" style="width: 50%; border-radius: 2px; background-color: white; color: #121111; text-transform: uppercase; font-weight: 900; font-size: 1.7em;">Clique Aqui</button>
+            </div> -->
+        </section>
+
+        <!-- <section>
+            <div class="carrousel">
+                <div class="tapa" id="move">
+                    <div class="item"><img src="https://discordapp.com/assets/7396edcf5d84892827af84f1225cfb1f.svg"></div>
+                    <div class="item"><img src="https://discordapp.com/assets/b15b697d79e5c6bd44dffed935a7c81d.svg"></div>
+                    <div class="item"><img src="https://discordapp.com/assets/2ad78321230f493c06bd6fecb3b9837a.svg"></div>
+                    <div class="item"><img src="https://discordapp.com/assets/3b41fea2513388dd94cada92231ed514.svg"></div>
+                    <div class="item"><img src="https://discordapp.com/assets/8885377207423277a825df9a496f8300.svg"></div>
+                    <div class="item"><img src="https://discordapp.com/assets/98713aa75e860cdba92f817b7ee5eb86.svg"></div>
+                    <div class="item"><img src="https://discordapp.com/assets/68121bb9aeba5724fe7940211737057a.svg"></div>
+                </div>
+            </div>
+        </section> -->
+
+        <section class="mt-5 d-flex flex-wrap justify-content-center">
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card rounded-3 shadow-sm" style="background-color: transparent; color: #f7f7f7;">
+              <div class="card-header text-center">
+                <h4 class="my-0" style="font-weight: 700;">BÔNUS 01</h4>
+                <p>Ganhe um pacote exclusivo com materiais essenciais para turbinar suas vendas automáticas!</p>
+              </div>
+              <div class="card-body">
+                <img src="Arquivos/automacao.png" alt="" class="img-fluid" style="border-radius: 5px;">
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card rounded-3 shadow-sm" style="background-color: transparent; color: #f7f7f7;">
+              <div class="card-header text-center">
+                <h4 class="my-0" style="font-weight: 700;">BÔNUS 02</h4>
+                <p>Um driver repleto de materiais PLR, vídeos de resultados e muito mais para impulsionar suas vendas!</p>
+              </div>
+              <div class="card-body">
+                <img src="Arquivos/livro.png" alt="" class="img-fluid" style="border-radius: 5px;">
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card rounded-3 shadow-sm" style="background-color: transparent; color: #f7f7f7;">
+              <div class="card-header text-center">
+                <h4 class="my-0" style="font-weight: 700;">BÔNUS 03</h4>
+                <p>Desbloqueie um bônus exclusivo: mais de 1.500 vídeos em 4K Full HD prontos para edição dinâmica dos seus vídeos!</p>
+              </div>
+              <div class="card-body">
+                <img src="Arquivos/video.png" alt="" class="img-fluid" style="border-radius: 5px;">
+              </div>
+            </div>
+          </div>
+        </section>
+      
+        <section>
+          <div class="d-flex justify-content-center align-items-center resp-text-center" style="color: white;" id="checkout">
+              <div class="col-md-5 py-4 rounded shadow text-center">
+                 <h2 class="title-resp-small" style=" font-size: 2.5em; font-weight: 900;">PARE DE <span style="background-color: rgb(226, 8, 8);"> PERDER TEMPO E GANHE DINHEIRO </span> PELA INTERNET HOJE!</h2>
+                 <p class="fw-bold" style="margin-bottom: 5px;">OFERTA RELÂMPAGO! ⚡️</p>
+                 <p>Se você já tentou vender online, mas sente que está <strong>fazendo tudo certo e mesmo assim não tem resultados</strong>, este curso é para você!</p>
+                 <p>Com o <strong>Guia de Vendas Orgânicas</strong>, você vai aprender <strong>as mesmas estratégias que transformaram pequenos negócios em verdadeiras máquinas de vendas!</strong></p>
+                                  <img src="Arquivos/oferta.png" alt="" width="70%" class="mb-4">
+                 <p style="margin-bottom: -10px; margin-top: -10px;">De R$ 67,99 por</p>
+                 <span class="fs-1 fw-bold">APENAS R$ 19,99</span>
+                 <p><a class="btn py-3 w-100 fw-bold text-uppercase mt-2" href="https://pay.kiwify.com.br/4haazjG" style="background-color:rgb(226, 8, 8); color: white; font-size: 1.5em; font-weight: 700;">GARANTIR MEU ACESSO <span style="text-decoration: underline;"> AGORA</span> &raquo;</a></p>
+                 <p style="font-size: 0.7em; color: gray;"> <strong> Compra 100% segura</strong> com <strong>garantia total de 30 dias.</strong> <br>
+                    Acesso imediato após a confirmação do pagamento.
+                 </p>
+              </div>
+           </div>
+      </section>
+      
+        <section class="mb-5 " style="margin-top: -20px;">
+              <div style="text-align: left; display: flex; gap: 10%;" class="resp-wrap">
+                <img src="Arquivos/30d-1.webp" width="35%" alt="" style="filter: invert(100%) brightness(200%);" class="mb-5 resp-garantia">
+
+                <div class="resp-text-center resp-title-margin">
+                 <h3 style="font-size: 1.5em; text-transform: uppercase; font-weight: bolder; color: white; "> <span style="font-size: 1.5em; font-weight: 900; color: white; background-color: rgb(226, 8, 8);">GARANTIA DE RESULTADO!</span>
+                    <br> <span class="resp-span" > O risco é todo nosso. </span>
+                 </h3>
+                 <p style="font-size: 1.2em; color: white; " class="resp-small-text">
+                    <strong class="resp-none">O código de defesa consumidor (Art. 49) garante 7 dias para solicitar reembolso em caso de insatisfação com o produto. E se por qualquer por QUALQUER RAZÃO  você entender que este treinamento não é para você basta me avisar e que te  devolvo cada centavo que você investiu, sem qualquer questionamento. Certo?
+                    </strong>
+                    <span class="resp-block" style="display: none;">O código de defesa consumidor (Art. 49) garante 7 dias para solicitar reembolso em caso de insatisfação com o produto. E se por qualquer por QUALQUER RAZÃO  você entender que este treinamento não é para você basta me avisar e que te  devolvo cada centavo que você investiu, sem qualquer questionamento. Certo?
+                    </span>
+                 </p>
+                </div>
+
+           </div>
+      </section>
+
+        <section >
+          <div class=" mb-4">
+            <p class="text-center title-resp-small" style="color: rgb(254, 254, 254); font-size: 2.2em; text-transform: uppercase; text-decoration: overline; font-weight: 700;">
+              <span>Perguntas  Frequentes!</span>
+              </p>
+            </div>
+              <div class=""  style="width: 100% !important;">
+                 <div id="faqAccordion"  >
+
+                  <!-- Pergunta -->
+                       <div class="card" style="background-color: transparent; text-align: left; ">
+                          <div class="card-header" id="faq1">
+                             <h5 class="mb-0 resp-small-text" style=" border-bottom: 2px solid rgb(248, 248, 248);">
+                                <button class="btn btn-link collapsed lead " data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1" style="font-size: 1.1em; color: #ffffff; text-decoration: none;" >
+                                  &raquo; Como funciona as aulas?
+                                </button>
+                             </h5>
+                          </div>
+                          <div id="collapse1" class="collapse" aria-labelledby="faq1" data-parent="#faqAccordion"  >
+                             <div class="card-body lead fs-5 resp-small-text "  style="color: white; text-align: left;">
+                              As aulas são gravadas e <span style="background-color: rgb(226, 8, 8);">atualizadas constantemente.</span> Você pode asssitir no celular, tablet ou computador.                                
+                             </div>
+                          </div>
+                       </div>
+
+                       <!-- Pergunta -->
+                       <div class="card" style="background-color: transparent; text-align: left;">
+                          <div class="card-header" id="faq2">
+                            <h5 class="mb-0 resp-small-text" style=" border-bottom: 2px solid rgb(248, 248, 248);">
+                              <button class="btn btn-link collapsed lead  " data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2" style="font-size: 1.1em; color: #ffffff; text-decoration: none;" >
+                                  &raquo;  Serve para quem não sabe nada?
+                                </button>
+                             </h5>
+                          </div>
+                          <div id="collapse2" class="collapse" aria-labelledby="faq2" data-parent="#faqAccordion"  >
+                             <div class="card-body lead fs-5 resp-small-text "  style="color: white; text-align: left;">
+                              Sim! Você vai aprender passo a passo 5 maneiras de <span style="background-color: rgb(226, 8, 8);">iniciar seu negócio digital lucrativo </span>mesmo que você nunca tenha iniciado neste mercado. As aulas são curtas e faceis de entender.                                 
+                             </div>
+                          </div>
+                       </div>
+
+                      <!-- Pergunta -->
+                       <div class="card" style="background-color: transparent; text-align: left;">
+                          <div class="card-header" id="faq3">
+                            <h5 class="mb-0 resp-small-text" style=" border-bottom: 2px solid rgb(248, 248, 248);">
+                              <button class="btn btn-link collapsed lead  " data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3" style="font-size: 1.1em; color: #ffffff; text-decoration: none;" >
+                                  &raquo;  Em quanto tempo vou ter resultados com o que vou aprender nesse curso?
+                                </button>
+                             </h5>
+                          </div>
+                          <div id="collapse3" class="collapse resp-small-text" aria-labelledby="faq3" data-parent="#faqAccordion"  >
+                             <div class="card-body lead fs-5  "  style="color: white; text-align: left;">
+                              Tudo depende da sua disponibilidade para estudar e praticar o que ensinamos. <span style="background-color: rgb(226, 8, 8);">Em média 3 semanas nossos alunos já estão colhendo frutos</span> do seu trabalho.                                
+                             </div>
+                          </div>
+                       </div>
+
+                      <!-- Pergunta -->
+                      <div class="card" style="background-color: transparent; text-align: left;">
+                        <div class="card-header" id="faq4">
+                          <h5 class="mb-0 resp-small-text" style=" border-bottom: 2px solid rgb(248, 248, 248);">
+                            <button class="btn btn-link collapsed lead  " data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4" style="font-size: 1.1em; color: #ffffff; text-decoration: none;" >
+                                &raquo;  Em quanto tempo terei acesso ao curso?
+                              </button>
+                           </h5>
+                        </div>
+                        <div id="collapse4" class="collapse resp-small-text" aria-labelledby="faq4" data-parent="#faqAccordion"  >
+                           <div class="card-body lead fs-5  "  style="color: white; text-align: left;">
+                            O <span style="background-color: rgb(226, 8, 8);">acesso é vitalicio</span>, com direio atualizações das aulas sem pagar nada a mais por isso.                                
+                           </div>
+                        </div>
+                     </div>
+                       
+                      <!-- Pergunta -->
+                      <div class="card" style="background-color: transparent; text-align: left;">
+                        <div class="card-header" id="faq5">
+                          <h5 class="mb-0 resp-small-text" style=" border-bottom: 2px solid rgb(248, 248, 248);">
+                            <button class="btn btn-link collapsed lead  " data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5" style="font-size: 1.1em; color: #ffffff; text-decoration: none;" >
+                                &raquo; Como vou receber acesso ao método?
+                              </button>
+                           </h5>
+                        </div>
+                        <div id="collapse5" class="collapse resp-small-text" aria-labelledby="faq5" data-parent="#faqAccordion"  >
+                           <div class="card-body lead fs-5  "  style="color: white; text-align: left;">
+                            Enviaremos após o pagamento um e-mail com <span style="background-color: rgb(226, 8, 8);">acesso da nossa area de membros exclusiva para você</span>estudar.                               
+                           </div>
+                        </div>
+                     </div>
+
+                      <!-- Pergunta -->
+                      <div class="card" style="background-color: transparent; text-align: left;">
+                        <div class="card-header" id="faq6">
+                          <h5 class="mb-0 resp-small-text" style=" border-bottom: 2px solid rgb(248, 248, 248);">
+                            <button class="btn btn-link collapsed lead  " data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6" style="font-size: 1.1em; color: #ffffff; text-decoration: none;" >
+                                &raquo; Existe alguma garantia?
+                              </button>
+                           </h5>
+                        </div>
+                        <div id="collapse6" class="collapse resp-small-text" aria-labelledby="faq6" data-parent="#faqAccordion"  >
+                           <div class="card-body lead fs-5  "  style="color: white; text-align: left;">
+                            <span style="background-color: rgb(226, 8, 8);">Sim</span>, se você não gostar poderá receber o seu dinheiro sem nenhum questionamento em 7 dias.                               
+                           </div>
+                        </div>
+                     </div>
+
+                      <!-- Pergunta -->
+                      <div class="card" style="background-color: transparent; text-align: left;">
+                        <div class="card-header" id="faq8">
+                          <h5 class="mb-0 resp-small-text" style=" border-bottom: 2px solid rgb(248, 248, 248);">
+                            <button class="btn btn-link collapsed lead  " data-toggle="collapse" data-target="#collapse8" aria-expanded="false" aria-controls="collapse8" style="font-size: 1.1em; color: #ffffff; text-decoration: none;" >
+                                &raquo; Tem suporte ao aluno?
+                              </button>
+                           </h5>
+                        </div>
+                        <div id="collapse8" class="collapse resp-small-text" aria-labelledby="faq8" data-parent="#faqAccordion"  >
+                           <div class="card-body lead fs-5  "  style="color: white; text-align: left;">
+                            SIM, <span style="background-color: rgb(226, 8, 8);">temos uma equipe disponível para te ajudar</span> sempre que desejar.                              
+                           </div>
+                        </div>
+                     </div>
+
+              </div>
+         </section>
+
+         <section class="mt-3">
+          <div class="container d-flex justify-content-center">
+            <a href="https://api.whatsapp.com/send/?phone=5533999183077&text=Queria+saber+sobre+o+curso+Fire+Vendas%21&type=phone_number&app_absent=0" target="_blank">
+            <button class="btn py-1 resp-btn-small" style=" border-radius: 2px; background-color: white; color: #121111; text-transform: uppercase; font-weight: 900; font-size: 1.7em;">Restou alguma dúvida? Me chame no Whatsapp!</button></a>
+          </div>
+      </section>
+
+
+
+         <footer>
+            <div class="container" style="color: white;">
+                <div class="py-3 my-4">
+                  <p class="text-center" style="color: white;">&copy; Copyright © <strong> Fire Vendas Oficial</strong></p>
+                  <p class="text-center" style="color: rgb(204, 204, 204); font-size: 0.9em;">Desenvolvido por <a href="https://www.instagram.com/devnichollas" target="_blank" style="color: white;"> @DevNichollas</a></p>
+                </div>
+              </div>
+         </footer>
+
+         
+
+    </main>
+
+  <script>
+
+    function playVideo() {
+      document.querySelector('.thumbnail').style.display = 'none'; // Esconde a imagem
+      document.querySelector('.play-button').style.display = 'none'; // Esconde o botão
+      document.getElementById('videoFrame').style.display = 'block'; // Exibe o vídeo
+    }
+
+    let x = 0;
+    const itemWidth = 350;
+    const container = document.getElementById("move");
+    const items = document.querySelectorAll(".item");
+    const totalItems = items.length;
+
+    // Clonar todos os itens para criar um loop infinito
+    items.forEach(item => {
+        let clone = item.cloneNode(true);
+        container.appendChild(clone);
+    });
+
+    function moveCarrousel() {
+        x -= itemWidth;
+        container.style.transition = "transform 0.9s ease";
+        container.style.transform = `translateX(${x}px)`;
+        
+        // Resetar para a posição inicial sem transição ao alcançar o final
+        setTimeout(() => {
+            if (Math.abs(x) >= totalItems * itemWidth) {
+                container.style.transition = "none";
+                x = 0;
+                container.style.transform = `translateX(${x}px)`;
+            }
+        }, 900); // Tempo igual ao da transição
+    }
+
+// Iniciar o movimento automático a cada 3 segundos
+setInterval(moveCarrousel, 3000);
+
+          // Smooth Scroll Polyfill for older browsers
+          if ('scrollBehavior' in document.documentElement.style === false) {
+      // Load the polyfill script
+      import('https://cdn.jsdelivr.net/npm/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js').then(() => {
+            smoothscroll.polyfill();
+      });
+    }
+
+    function changeImage(imageSrc) {
+    document.getElementById('placaImage').src = imageSrc;
+  }
+
+  function changePulseiraImage(imageSrc) {
+    document.getElementById('pulseiraImage').src = imageSrc;
+  }
+
+  img1 = document.getElementById('img-1')
+        img2 = document.getElementById('img-2')
+        img3 = document.getElementById('img-3')
+        i = 1
+
+        function moveCarrouselResp() {
+            if (i == 1) {
+                img1.style.display = 'none'
+                img2.style.display = 'block'
+                img3.style.display = 'none'
+            } else if (i == 2) {
+                img1.style.display = 'none'
+                img2.style.display = 'none'
+                img3.style.display = 'block'
+            } else if (i == 3) {
+                img1.style.display = 'block'
+                img2.style.display = 'none'
+                img3.style.display = 'none'
+            }
+        i = i +1  
+        if (i > 3) {
+            i = 1
+        }  
+    }
+
+    setInterval(moveCarrouselResp, 3000);
+
+
+
+  </script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
