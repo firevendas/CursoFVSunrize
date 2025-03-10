@@ -150,9 +150,20 @@
     .resp-wrap{
       flex-direction: column !important;
     }	
-
-
 }
+	  
+@media (max-width: 768px) {
+  #videoteste {
+	display:none;
+  }
+}
+
+  @media (min-width: 769px) {
+    .mobile-video {
+      display: none;
+    }
+  }
+
   </style>
 </head>
 <body style="background-color: #030000;">
@@ -186,35 +197,35 @@
         <section class="resp-none">
             <div class="carrousel">
                 <div class="tapa" id="move">
-                  <div class="item "><img src="Arquivos/Relato1.jpg"></div>
-                  <div class="item "><img src="Arquivos/Relato3.jpg"></div>
-                  <div class="item "><img src="Arquivos/Relato2.jpg"></div>
-                  <div class="item "><img src="Arquivos/Relato4.jpeg"></div>
+                  <div class="item "><img src="Arquivos/d1.jpg"></div>
+                  <div class="item "><img src="Arquivos/d2.PNG"></div>
+                  <div class="item "><img src="Arquivos/d3.PNG"></div>
+                  <div class="item "><img src="Arquivos/d4.PNG"></div>
                     
-                    <div class="item "><img src="Arquivos/Relato1.jpg"></div>
-                    <div class="item "><img src="Arquivos/Relato3.jpg"></div>
-                    <div class="item "><img src="Arquivos/Relato2.jpg"></div>
-                    <div class="item "><img src="Arquivos/Relato4.jpeg"></div>
+                  <div class="item "><img src="Arquivos/d1.jpg"></div>
+                  <div class="item "><img src="Arquivos/d2.PNG"></div>
+                  <div class="item "><img src="Arquivos/d3.PNG"></div>
+                  <div class="item "><img src="Arquivos/d4.PNG"></div>
                     
-                    <div class="item "><img src="Arquivos/Relato1.jpg"></div>
-                    <div class="item "><img src="Arquivos/Relato3.jpg"></div>
-                    <div class="item "><img src="Arquivos/Relato2.jpg"></div>
-                    <div class="item "><img src="Arquivos/Relato4.jpeg"></div>
+                    <div class="item "><img src="Arquivos/d1.jpg"></div>
+                  <div class="item "><img src="Arquivos/d2.PNG"></div>
+                  <div class="item "><img src="Arquivos/d3.PNG"></div>
+                  <div class="item "><img src="Arquivos/d4.PNG"></div>
 
-                    <div class="item "><img src="Arquivos/Relato1.jpg"></div>
-                    <div class="item "><img src="Arquivos/Relato3.jpg"></div>
-                    <div class="item "><img src="Arquivos/Relato2.jpg"></div>
-                    <div class="item "><img src="Arquivos/Relato4.jpeg"></div>
+                  <div class="item "><img src="Arquivos/d1.jpg"></div>
+                  <div class="item "><img src="Arquivos/d2.PNG"></div>
+                  <div class="item "><img src="Arquivos/d3.PNG"></div>
+                  <div class="item "><img src="Arquivos/d4.PNG"></div>
+			
+                  <div class="item "><img src="Arquivos/d1.jpg"></div>
+                  <div class="item "><img src="Arquivos/d2.PNG"></div>
+                  <div class="item "><img src="Arquivos/d3.PNG"></div>
+                  <div class="item "><img src="Arquivos/d4.PNG"></div>
 
-                    <div class="item "><img src="Arquivos/Relato1.jpg"></div>
-                    <div class="item "><img src="Arquivos/Relato3.jpg"></div>
-                    <div class="item "><img src="Arquivos/Relato2.jpg"></div>
-                    <div class="item "><img src="Arquivos/Relato4.jpeg"></div>
-
-                    <div class="item "><img src="Arquivos/Relato1.jpg"></div>
-                    <div class="item "><img src="Arquivos/Relato3.jpg"></div>
-                    <div class="item "><img src="Arquivos/Relato2.jpg"></div>
-                    <div class="item "><img src="Arquivos/Relato4.jpeg"></div>
+                  <div class="item "><img src="Arquivos/d1.jpg"></div>
+                  <div class="item "><img src="Arquivos/d2.PNG"></div>
+                  <div class="item "><img src="Arquivos/d3.PNG"></div>
+                  <div class="item "><img src="Arquivos/d4.PNG"></div>
 
                 </div>
             </div>
@@ -245,7 +256,7 @@
             </div>
         </section>
 
-        <section>
+<!--         <section>
             <div class="album ">
                 <div class="container">
         
@@ -384,7 +395,26 @@
                   </div>
                 </div>
               </div>
-        </section>
+        </section> -->
+
+	<section>
+          <div class="container" style=" display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+		<iframe id="videoteste" width="960" height="720" src="https://www.youtube.com/embed/SGvNzDqJT5c?si=ed6ibJIYu0zlGBau&controls=0&loop=1&playlist=SGvNzDqJT5c&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+	  </div>
+      </section>
+
+	<section>
+          <div class="container" style=" display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+		<iframe class="mobile-video" width="100%" height="500" 
+		        src="https://www.youtube.com/embed/Ku9WTM8pbqQ?autoplay=1&loop=1&playlist=Ku9WTM8pbqQ" 
+		        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+		        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+		</iframe>
+	  </div>
+      </section>
+
+	    
 
         <section>
           <div class="container">
@@ -520,7 +550,7 @@
                  <p style="margin-bottom: -10px; margin-top: -10px;">De R$ 67,99 por</p>
                  <span class="fs-1 fw-bold">APENAS R$ 19,99</span>
                  <p><a class="btn py-3 w-100 fw-bold text-uppercase mt-2" href="https://pay.sunize.com.br/lOTIDGec" style="background-color:rgb(226, 8, 8); color: white; font-size: 1.5em; font-weight: 700;">GARANTIR MEU ACESSO <span style="text-decoration: underline;"> AGORA</span> &raquo;</a></p>
-                 <p style="font-size: 0.7em; color: gray;"> <strong> Compra 100% segura</strong> com <strong>garantia total de 30 dias.</strong> <br>
+                 <p style="font-size: 0.7em; color: gray;"> <strong> Compra 100% segura</strong> com <strong>garantia total de 7 dias.</strong> <br>
                     Acesso imediato após a confirmação do pagamento.
                  </p>
               </div>
@@ -529,7 +559,7 @@
       
         <section class="mb-5 " style="margin-top: -20px;">
               <div style="text-align: left; display: flex; gap: 10%;" class="resp-wrap">
-                <img src="Arquivos/30d-1.webp" width="35%" alt="" style="filter: invert(100%) brightness(200%);" class="mb-5 resp-garantia">
+                <img src="Arquivos/garantianova.png" width="25%" alt=""  class="mb-5 resp-garantia">
 
                 <div class="resp-text-center resp-title-margin">
                  <h3 style="font-size: 1.5em; text-transform: uppercase; font-weight: bolder; color: white; "> <span style="font-size: 1.5em; font-weight: 900; color: white; background-color: rgb(226, 8, 8);">GARANTIA DE RESULTADO!</span>
@@ -588,10 +618,10 @@
                        </div>
 
                       <!-- Pergunta -->
-                       <div class="card" style="background-color: transparent; text-align: left;">
+                       <div class="card" style="background-color: transparent; text-align: left !important;">
                           <div class="card-header" id="faq3">
                             <h5 class="mb-0 resp-small-text" style=" border-bottom: 2px solid rgb(248, 248, 248);">
-                              <button class="btn btn-link collapsed lead  " data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3" style="font-size: 1.1em; color: #ffffff; text-decoration: none;" >
+                              <button class="btn btn-link collapsed lead  " data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3" style="font-size: 1.1em; color: #ffffff; text-decoration: none; text-align: left;" >
                                   &raquo;  Em quanto tempo vou ter resultados com o que vou aprender nesse curso?
                                 </button>
                              </h5>
@@ -607,7 +637,7 @@
                       <div class="card" style="background-color: transparent; text-align: left;">
                         <div class="card-header" id="faq4">
                           <h5 class="mb-0 resp-small-text" style=" border-bottom: 2px solid rgb(248, 248, 248);">
-                            <button class="btn btn-link collapsed lead  " data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4" style="font-size: 1.1em; color: #ffffff; text-decoration: none;" >
+                            <button class="btn btn-link collapsed lead  " data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4" style="font-size: 1.1em; color: #ffffff; text-decoration: none;  text-align: left;" >
                                 &raquo;  Em quanto tempo terei acesso ao curso?
                               </button>
                            </h5>
@@ -691,6 +721,7 @@
          
 
     </main>
+
 
   <script>
 
